@@ -1,0 +1,87 @@
+:root{
+   --primary-color:#2f8f0d; 
+}
+body{
+   color:var(--primary-color);
+   font-family: "Montserrat", sans-serif;
+}
+.bill-amt-head,.cash-given-head,.return-change-head{
+  font-size:xx-large; 
+}
+.bill-amt-input-box , .cash-given-input-box{
+   border: 3px solid var(--primary-color);
+   width:28% !important;
+   height:45px;
+   border-radius:5px;
+}
+.cash-register-check-box>button{
+   background-color: var(--primary-color);
+   color:white;
+   border-color: var(--primary-color);
+   width:20% !important;
+   background: var(--primary-color);
+   color: #fff;
+   padding: 0.7rem 1rem;
+   border-radius: 0.5rem;
+   font-size: large;
+   cursor: pointer;
+   outline: #fff;
+   margin: auto;
+   display: block;
+}
+.table th, .table td{
+   border:2px solid var(--primary-color);
+   width:0%;
+   color:black;
+}
+.change-table > caption{
+   font-size:xx-large;
+   margin: 1rem auto;
+   text-align: center;
+}
+
+.main{
+   position:fixed;
+   left:0;
+   top:0;
+   width:100%;
+   height:100%;
+   background-color: rgba(118 137 172 / 90%);
+   visibility:hidden;
+ }
+ .popUp{
+   width:90%;
+   max-width:400px;
+   margin:4em auto;
+   left: 0;
+   top:0;
+   background-color:white;
+   position:relative;
+   border-radius:5px;
+   padding:2em;
+   text-align:center !important;
+ }
+ .content{
+   height:60px;
+   font-size:1.2em;
+   color:lightgray;
+   font-weight:200;
+   line-height:10px;
+ }
+ .cd-button{
+   display:inline-flex;
+   flex-direction:row;
+   justify-content:center;
+ }
+ .popUp-btn{
+   line-height:30px;
+ }
+ .popUp-btn> #close-btn{
+   background: #ee4d4d;
+   width: 20% !important;
+   height: 30px;
+   border-radius: 5px;
+   border: 1px solid white;
+   color: white;
+   cursor:pointer;
+ }

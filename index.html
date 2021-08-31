@@ -1,0 +1,92 @@
+<!Doctype html>
+<html>
+   <head>
+      <title>Cash Register</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"crossorigin="anonymous">
+      <script async src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+      <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <link rel='stylesheet' href="./style.css">
+      <script async src="./index.js"></script>
+   </head>
+   <body>
+      <main class="container text-center my-5 py-5">
+         <div style>
+            <!-- Pop-Up if user enter wrong amount  -->
+            <div class="main" id="main">
+               <main>
+                  <div class="popUp">
+                     <div class="content">
+                        Do you want to wash plates? <img src="./error-image.png" width="30px" height="30px" style="opacity:.7"/>
+                     </div>
+                     <div class="popUp-btn">
+                        <button type="button" name="close-btn" onclick="closePopUp()" id="close-btn">Close</button>
+                     </div>
+                  </div>
+               </main>
+            </div>
+            
+            <h1 class='font-weight-bold'>Cash register manager</h1>
+            <div class='description mt-3'>
+               <h4 class='text-dark py-2'>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</h4>
+            </div>
+            <div class="main-content">
+               <div class="bill_amt_block">
+                  <div class="bill-amt-head">
+                     <div class="font-weight-bold text-dark">Bill Amount:</div>
+                  </div>
+                  <div class="bill-amt-box mt-3" style="text-align: -webkit-center">
+                     <div class="form-group">
+                        <input type="text" class="form-control bill-amt-input-box" id="bill_amt">
+                     </div>
+                  </div>
+               </div>
+               <div class="cash_given_block">
+                  <div class="cash-given-head">
+                     <div class="font-weight-bold text-dark">Cash given:</div>
+                  </div>
+                  <div class="cash-given-box mt-3" style="text-align:-webkit-center">
+                     <div class="form-group">
+                        <input type="text" class="form-control cash-given-input-box" id="cash_given_box"/>
+                     </div>
+                  </div>
+               </div>
+               <div class="cash-register-check-box">
+                  <button type="button" class="btn" id="check" onclick="calculate_return_change()">Check</button>
+               </div>
+               <div class="return-change-block mt-5">
+                  <div class="return-change-head">
+                     <div class="font-weight-bold text-dark">Cash given:</div>
+                  </div>
+               </div>
+               <table class="table change-table mt-2">
+                  <tbody style="font-size:large">
+                     <tr>
+                        <th>No of Notes</th>
+                        <td id="2000"></td>
+                        <td id="500"></td>
+                        <td id="200"></td>
+                        <td id="100"></td>
+                        <td id="20"></td>
+                        <td id="10"></td>
+                        <td id="5"></td>
+                        <td id="1"></td>
+                     </tr>
+                     <tr>
+                        <th>Note</th>
+                        <td>2000</td>
+                        <td>500</td>
+                        <td>200</td>
+                        <td>100</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>5</td>
+                        <td>1</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </main>
+   </body>
+</html>
